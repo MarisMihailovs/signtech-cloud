@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signtech Cloud</title>
+    <link rel="shortcut icon" href="logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="section" id="globe">
+        <div class="content-intro">
+            <!-- title -->
+            <div class="text-container">
+                <h1 class="intro title">Samsung <span style="font-weight:bold">MagicINFO</span>
+                    <br> Take your messaging to new heights with our cloud service!
+                </h1>
+
+                <p class="intro text">Revolutionize your business with Signtech Digital Signage Cloud Service! Engage
+                    customers with dynamic content displayed on digital screens, all managed from a centralized,
+                    user-friendly
+                    platform accessible from anywhere.
+                    <i><b> Boost sales, improve communication, and enhance customer experience. </i></b>Samsung
+                    MagicINFO
+                    is powerful and affordable digital signage solution.
+                </p>
+                <button class="button-38" role="button">Get in touch!</button>
+            </div>
+        </div>
+        <div class="nav-container" id="mainNavbar">
+            <div class="nav-items">
+                <img src="img/SignTech_white_svg.svg" class="logo">
+                <a href="">Features</a>
+                <a href="">Pricing</a>
+                <a href="">Testimonials</a>
+                <a href="">Contacts</a>
+                <a href="">FAQ</a>
+                <a href="">Downloads</a>
+            </div>
+        </div>
+    </div>
+    <div class="section cloud">
+        <div class="content-cloud">
+
+
+        </div>
+    </div>
+    <div class="section magicINFO">
+        <div class="content-magicINFO">
+
+
+        </div>
+    </div>
+    <!--Back to top button-->
+    <div id="backtotop" onclick="topFunction()" title="Go to top"><svg xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24" width="24" height="24">
+            <path
+                d="M4.97 12.97a.75.75 0 101.06 1.06L11 9.06v12.19a.75.75 0 001.5 0V9.06l4.97 4.97a.75.75 0 101.06-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25zM4.75 3.5a.75.75 0 010-1.5h14.5a.75.75 0 010 1.5H4.75z">
+            </path>
+        </svg></div>
+
+    <!-- Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
+    <script>
+        VANTA.GLOBE({
+            el: "#globe",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0xded9db,
+            color2: 0xd5d6d6,
+            backgroundColor: 0x9d8ade
+        })
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
