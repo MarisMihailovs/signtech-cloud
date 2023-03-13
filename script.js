@@ -1,8 +1,10 @@
 const sectionHeadings = document.querySelectorAll('.title');
 const sectionTexts = document.querySelectorAll('.text');
+const navLinks = document.getElementsByClassName('navLinks');
 // on scroll animation for headings
 const mybutton = document.getElementById('backtotop');
 const navContainer = document.getElementById('mainNavbar');
+const menuBars = document.getElementById('menu-bars');
 
 let callback = (entries, observer) => {
     // target element:
@@ -50,7 +52,7 @@ window.addEventListener('scroll', () => {
     // if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
     //     navContainer.toggleClass("scrolled");
     // }
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
         mybutton.style.display = "flex";
         navContainer.classList.add("scrolled");
     } else {
@@ -65,3 +67,26 @@ function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 };
+
+function toggleNav() {
+    // toggle : menu bars open/closed
+    menuBars.classList.toggle('change');
+    //    menu active or not
+    for (let i = 0; i < navLinks.length; i++) {
+        navLinks[i].classList.toggle('navLinksShow');
+    }
+}
+
+function resetNav() {
+    menuBars.classList.remove('change');
+    for (let i = 0; i < navLinks.length; i++) {
+        navLinks[i].classList.remove('navLinksShow');
+    }
+}
+
+// event listeners
+
+menuBars.addEventListener('click', toggleNav);
+for (let i = 0; i < navLinks.length; i++) {
+    navLinks[i].addEventListener('click', resetNav);
+}

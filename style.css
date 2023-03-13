@@ -37,6 +37,51 @@ body::-webkit-scrollbar-thumb {
   scroll-margin-top: 60px;
 }
 
+.logo {
+  user-select: none;
+  width: 150px;
+  height: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-inline: 5px;
+}
+
+/* --- Menu Bars ------------------------------------ */
+
+.menu-bars {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 10;
+  display: none;
+  cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 3px;
+  background-color: #ffffff;
+  margin: 8px 0;
+  transition: 0.3s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+  transform: rotate(-45deg) translate(-7px, 8px);
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+  opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+  transform: rotate(45deg) translate(-6px, -8px);
+}
+
 .content-intro {
   display: flex;
   flex-direction: column;
@@ -113,7 +158,6 @@ p {
   min-height: 75vh;
   color: rgb(119, 119, 119);
   background-color: rgb(157, 192, 224);
-  border-top-right-radius: 50px;
 }
 
 .content-pricing>img {
@@ -210,15 +254,6 @@ a:hover {
 
 a:active {
   text-decoration: underline;
-}
-
-.logo {
-  user-select: none;
-  width: 150px;
-  height: 40px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-inline: 5px;
 }
 
 .social {
@@ -323,8 +358,18 @@ td:nth-child(3) {
 
 
 @media only screen and (max-width: 360px) {
+
+  .navLinksShow {
+    display: inline;
+    margin: 30px;
+  }
+
   a {
     display: none;
+  }
+
+  .menu-bars {
+    display: inline;
   }
 
   .content-intro {
@@ -356,6 +401,7 @@ td:nth-child(3) {
 
   .nav-container {
     display: flex;
+    background: #2622ac;
     width: 95vw;
     margin-inline: auto;
   }
@@ -390,29 +436,44 @@ td:nth-child(3) {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 740px) {
+  a {
+    display: none;
+  }
+
+  .menu-bars {
+    display: inline;
+  }
+
   .content-intro {
     width: 95vw;
-
+    justify-content: flex-end;
   }
 
   .nav-container {
     display: flex;
+    justify-content: space-around;
     width: 95vw;
+    background: #2622ac;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
   }
 
   .content-comparison {
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
 
   .text-container {
     width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+
   }
 
   .intro.title {
-    margin-top: 50px;
+    margin-top: 60px;
     margin-bottom: 30px;
     font-size: 32px;
     line-height: 56px;
