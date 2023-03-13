@@ -1,6 +1,7 @@
 html {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -33,13 +34,8 @@ body::-webkit-scrollbar-thumb {
 .section {
   margin: 0;
   padding: 0;
+  scroll-margin-top: 60px;
 }
-
-
-.magicINFO {
-  background: whitesmoke;
-}
-
 
 .content-intro {
   display: flex;
@@ -52,25 +48,76 @@ body::-webkit-scrollbar-thumb {
   color: white;
 }
 
-.content-cloud {
+.section.comparison {
+  display: flex;
+  flex-direction: column;
+}
+
+.content-comparison {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 100vw;
+  align-content: center;
   min-height: 75vh;
-  border-top-left-radius: 50px;
   background: whitesmoke;
   color: rgb(119, 119, 119);
+  border-radius: 10px;
 }
 
-.content-magicINFO {
+#content-comparison>h1 {
+  margin-inline: auto;
+  text-align: center;
+}
+
+
+h1 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 44px;
+  line-height: 68px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 15px;
+}
+
+p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: justify;
+  margin: 15px;
+}
+
+.magicINFO-logo {
+  width: 250px;
+  aspect-ratio: 16/9;
+  margin: 10px;
+}
+
+.comparison {
+  display: flex;
+  min-width: 50vw;
+  margin: 50px;
+  background: whitesmoke;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px black;
+}
+
+.content-pricing {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   width: 100vw;
   min-height: 75vh;
   color: rgb(119, 119, 119);
   background-color: rgb(157, 192, 224);
   border-top-right-radius: 50px;
+}
+
+.content-pricing>img {
+  width: 550px;
+  height: 550px;
 }
 
 
@@ -121,26 +168,6 @@ body::-webkit-scrollbar-thumb {
   align-content: center;
   width: 60%;
   height: 50%;
-}
-
-.title {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 44px;
-  line-height: 68px;
-  margin-top: 40px;
-  margin-bottom: 50px;
-  /* or 105% */
-}
-
-.text {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 22px;
-  text-align: justify;
-  margin-bottom: 20px;
-  /* or 160% */
 }
 
 .nav-container {
@@ -213,6 +240,31 @@ a:active {
   margin: 5px;
 }
 
+tr:nth-child(even) {
+  background-color: #bababa;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  text-align: center;
+}
+
+td:nth-child(2),
+td:nth-child(3) {
+  text-align: center;
+}
+
 #backtotop {
   display: none;
   justify-content: center;
@@ -278,6 +330,24 @@ a:active {
     width: 95vw;
   }
 
+  .comparison {
+    margin: 10px;
+  }
+
+  .content-comparison {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .comparison-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
   .nav-container {
     display: flex;
     width: 95vw;
@@ -326,13 +396,8 @@ a:active {
     border-bottom-left-radius: 10px;
   }
 
-  .content-cloud {
+  .content-comparison {
     flex-direction: column;
-  }
-
-  .cloud-database {
-    display: flex;
-    justify-content: center;
   }
 
 
