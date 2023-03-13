@@ -193,13 +193,14 @@ p {
 }
 
 .button-38:hover {
-  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
   color: white;
+  outline: 2px solid white;
 }
 
 .button-38:focus {
-  outline: 2px solid transparent;
-  outline-offset: 2px;
+
+  outline: 2px solid #2622ac outline-offset: 2px;
 }
 
 .button-38:focus-visible {
