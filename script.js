@@ -69,6 +69,7 @@ function topFunction() {
 };
 
 function toggleNav() {
+    navContainer.classList.toggle('nav-expand');
     // toggle : menu bars open/closed
     menuBars.classList.toggle('change');
     //    menu active or not
@@ -78,6 +79,7 @@ function toggleNav() {
 }
 
 function resetNav() {
+    navContainer.classList.remove('nav-expand');
     menuBars.classList.remove('change');
     for (let i = 0; i < navLinks.length; i++) {
         navLinks[i].classList.remove('navLinksShow');
