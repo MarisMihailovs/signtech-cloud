@@ -79,10 +79,11 @@ function toggleNav() {
 }
 
 function resetNav() {
-    navContainer.classList.remove('nav-expand');
+    navContainer.classList.remove('nav-expand')
     menuBars.classList.remove('change');
     for (let i = 0; i < navLinks.length; i++) {
         navLinks[i].classList.remove('navLinksShow');
+
     }
 }
 

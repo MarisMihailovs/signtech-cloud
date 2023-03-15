@@ -29,13 +29,14 @@
                     MagicINFO
                     is powerful and affordable digital signage solution.
                 </p>
-                <button class="button-38" role="button">Get in touch!</button>
+                <button class="button-38" role="button" onclick="window.location.href='#contacts';">Get in
+                    touch!</button>
             </div>
         </div>
         <div class="nav-container" id="mainNavbar">
 
             <div class="nav-items">
-                <img src="img/SignTech_white_svg.svg" class="logo">
+                <a href="#"><img src="img/SignTech_white_svg.svg" class="logo"></a>
                 <!-- menu bars -->
                 <div class="menu-bars" id="menu-bars">
                     <div class="bar1"></div>
@@ -44,7 +45,7 @@
                 </div>
                 <a href="#content-comparison" class="navLinks">Features</a>
                 <a href="#content-pricing" class="navLinks">Pricing</a>
-                <a href="" class="navLinks">Contacts</a>
+                <a href="#contacts" class="navLinks">Contacts</a>
                 <a href="" class="navLinks">FAQ</a>
                 <a href="" class="navLinks">Downloads</a>
             </div>
@@ -54,7 +55,7 @@
         </div>
     </div>
     <div class="section comparison" id="content-comparison">
-        <h1>Enhance Your Display with MagicInfo: The Ultimate Digital Signage Solution!</h1>
+        <h1 class="title">Enhance Your Display with MagicInfo: The Ultimate Digital Signage Solution!</h1>
         <div class="content-comparison">
             <div class="title">
                 <div class="comparison-images"><img src="img/logo-magicinfo.svg" class="magicINFO-logo"
@@ -126,39 +127,85 @@
         </div>
     </div>
     <div class="section magicINFO" id="content-pricing">
+        <h1 class="title">Choose solution that fits you best!</h1>
         <div class="content-pricing">
-            <img src="img/software_box_LiteCloud.svg" alt="">
-            <img src="img/software_box_PremiumCloud.svg" alt="">
-            <img src="img/software_box_LiteServer.svg" alt="">
-            <img src="img/software_box_PremiumServer.svg" alt="">
+            <div>
+                <h2>Cloud based package with monthly subscription!</h2>
+                <div class="cloud-package text">
+
+                    <img src="img/software_box_LiteCloud.svg" alt="">
+                    <img src="img/software_box_PremiumCloud.svg" alt="">
+                </div>
+            </div>
+            <div>
+                <h2>Server based package with one time license payment!</h2>
+                <div class="server-package text">
+
+                    <img src="img/software_box_LiteServer.svg" alt="">
+                    <img src="img/software_box_PremiumServer.svg" alt="">
+                </div>
+            </div>
 
         </div>
     </div>
-    <!--Back to top button-->
-    <div id="backtotop" onclick="topFunction()" title="Go to top"><svg xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24" width="24" height="24">
-            <path
-                d="M4.97 12.97a.75.75 0 101.06 1.06L11 9.06v12.19a.75.75 0 001.5 0V9.06l4.97 4.97a.75.75 0 101.06-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25zM4.75 3.5a.75.75 0 010-1.5h14.5a.75.75 0 010 1.5H4.75z">
-            </path>
-        </svg></div>
+    <div class="section contacts" id="contacts">
+        <div class="container">
+            <h1>Leave a message!</h1>
+            <!-- form -->
+            <form id="form">
+                <!-- full name -->
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" placeholder="Full Name" name="name" required minlength="3"
+                        maxlength="100">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" placeholder="+371" name="phone" required pattern="(\+\d{1,15})">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" id="email" placeholder="email@address.com" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="website">Full website</label>
+                    <input type="url" id="website" placeholder="http://" name="website">
+                </div>
+                <div class="wrapper">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+            <!-- error / success message -->
+            <div class="message-container">
+                <h3 id="message">Please register</h3>
+            </div>
 
-    <!-- Script -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
-    <script>
-        VANTA.GLOBE({
-            el: "#globe",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 200.00,
-            minWidth: 200.00,
-            scale: 1.00,
-            scaleMobile: 1.00,
-            color: 0x543fff
-        })
-    </script>
-    <script src="script.js"></script>
+        </div>
+        <!--Back to top button-->
+        <div id="backtotop" onclick="topFunction()" title="Go to top"><svg xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24" width="24" height="24">
+                <path
+                    d="M4.97 12.97a.75.75 0 101.06 1.06L11 9.06v12.19a.75.75 0 001.5 0V9.06l4.97 4.97a.75.75 0 101.06-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25zM4.75 3.5a.75.75 0 010-1.5h14.5a.75.75 0 010 1.5H4.75z">
+                </path>
+            </svg></div>
+
+        <!-- Script -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
+        <script>
+            VANTA.GLOBE({
+                el: "#globe",
+                mouseControls: true,
+                touchControls: true,
+                gyroControls: false,
+                minHeight: 200.00,
+                minWidth: 200.00,
+                scale: 1.00,
+                scaleMobile: 1.00,
+                color: 0x543fff
+            })
+        </script>
+        <script src="script.js"></script>
 </body>
 
 </html>
