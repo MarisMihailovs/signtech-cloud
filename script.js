@@ -28,26 +28,17 @@ function validateForm() {
 }
 
 function storeFormData() {
-    const UsersInfo = {
-        name: form.name.value,
-        phone: form.phone.value,
-        email: form.email.value,
-        Message: form.message.value,
 
-    };
-    //  user data pasing to DB or smth
-    console.log(UsersInfo);
     message.textContent = 'Thank you! we will contact you soon!';
-    console.log()
+
 }
 
 function processFormData(e) {
-    e.preventDefault();
     //    validat form 
     validateForm();
     // submit data if valid
     if (isValid) {
-        storeFormData();
+
     }
 }
 
