@@ -59,8 +59,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .form-container {
-
   display: flex;
+  max-width: 95vw;
   color: white;
   background-color: #68678c;
   flex-direction: column;
@@ -84,6 +84,8 @@ form {
 }
 
 label {
+  display: block;
+  margin-bottom: 0.5rem;
   position: relative;
   bottom: 3px;
 }
@@ -112,9 +114,11 @@ input:invalid {
 }
 
 textarea {
+  box-sizing: border-box;
   resize: none;
-  width: 100%;
   border-radius: 5px;
+  margin: 0;
+  padding: 0.5rem;
 }
 
 textarea:valid {
@@ -570,6 +574,9 @@ td:nth-child(3) {
     height: 150px;
   }
 
+  textarea {
+    width: 100%;
+  }
 
   .logo {
     user-select: none;
@@ -613,17 +620,6 @@ td:nth-child(3) {
     line-height: 68px;
     /* or 105% */
   }
-
-  .text {
-    font-size: 15px;
-    line-height: 22px;
-    /* or 160% */
-  }
-
-  .container {
-    width: 90%;
-  }
-
 
   .menu-bars {
     display: inline;
