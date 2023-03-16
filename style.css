@@ -235,7 +235,7 @@ h1 {
   line-height: 68px;
   margin-top: 30px;
   margin-bottom: 30px;
-  margin-left: 15px;
+  margin-inline: 15px;
 }
 
 p {
