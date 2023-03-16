@@ -5,6 +5,56 @@ const navLinks = document.getElementsByClassName('navLinks');
 const mybutton = document.getElementById('backtotop');
 const navContainer = document.getElementById('mainNavbar');
 const menuBars = document.getElementById('menu-bars');
+// form to leave a message
+const form = document.getElementById('form');
+const messageContainer = document.querySelector('.message-container');
+const message = document.getElementById('message-text');
+
+let isValid = false;
+
+
+function validateForm() {
+    // using contraint API 
+    isValid = form.checkValidity();
+
+    if (!isValid) {
+        // style main message for an error
+        message.textContent = 'Please fill out all fields';
+        message.style.color = 'red';
+        messageContainer.style.borderColor = "red";
+        return;
+    }
+
+}
+
+function storeFormData() {
+    const UsersInfo = {
+        name: form.name.value,
+        phone: form.phone.value,
+        email: form.email.value,
+        Message: form.message.value,
+
+    };
+    //  user data pasing to DB or smth
+    console.log(UsersInfo);
+    message.textContent = 'Thank you! we will contact you soon!';
+    console.log()
+}
+
+function processFormData(e) {
+    e.preventDefault();
+    //    validat form 
+    validateForm();
+    // submit data if valid
+    if (isValid) {
+        storeFormData();
+    }
+}
+
+// event listener 
+
+form.addEventListener('submit', processFormData);
+
 
 let callback = (entries, observer) => {
     // target element:
@@ -93,3 +143,6 @@ menuBars.addEventListener('click', toggleNav);
 for (let i = 0; i < navLinks.length; i++) {
     navLinks[i].addEventListener('click', resetNav);
 }
+
+
+
