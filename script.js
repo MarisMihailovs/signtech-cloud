@@ -9,6 +9,7 @@ const menuBars = document.getElementById('menu-bars');
 const form = document.getElementById('form');
 const messageContainer = document.querySelector('.message-container');
 const message = document.getElementById('message-text');
+const faqItems = document.querySelectorAll('.faq-item');
 
 let isValid = false;
 
@@ -135,5 +136,13 @@ for (let i = 0; i < navLinks.length; i++) {
     navLinks[i].addEventListener('click', resetNav);
 }
 
+faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    const answer = item.querySelector('.faq-answer');
+
+    question.addEventListener('click', () => {
+        answer.classList.toggle('show');
+    });
+});
 
 

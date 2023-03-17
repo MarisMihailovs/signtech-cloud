@@ -45,13 +45,15 @@
                 </div>
                 <a href="#content-comparison" class="navLinks">Features</a>
                 <a href="#content-pricing" class="navLinks">Pricing</a>
+                <a href="#content-FAQ" class="navLinks">FAQ</a>
                 <a href="#contacts" class="navLinks">Contacts</a>
-                <a href="" class="navLinks">FAQ</a>
                 <a href="" class="navLinks">Support</a>
             </div>
         </div>
-        <div class="social"><img src="img/social/icons8-linkedin.svg" alt="soial media icons"><img
-                src="img/social/icons8-facebook.svg" alt="">
+        <div class="social"><a href="https://lv.linkedin.com/company/signtech.lv" target=”_blank”><img
+                    src="img/social/icons8-linkedin.svg" alt="social media icons linkedin"></a><a
+                href="https://www.facebook.com/Signtech.lv" target=”_blank”><img src="img/social/icons8-facebook.svg"
+                    alt="social media icons linkedin facebook"></a>
         </div>
     </div>
     <div class="section comparison" id="content-comparison">
@@ -192,82 +194,104 @@
 
         </div>
     </div>
-    <div class="section contacts" id="contacts">
-        <div class="map-details text"><iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2173.6028187097045!2d24.125755933074448!3d56.989862319818165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eecf0a33ab2059%3A0x2c66d58ba2548cd!2sSigntech%20Ltd.!5e0!3m2!1sen!2slv!4v1678964744758!5m2!1sen!2slv"
-                style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
-            <p>SIA “Signtech”
-                Registration No.: 40103828379
-                Legal address: Riga, 34 Duntes Street, LV-1005
-                Bank details: JSC Swedbank HABALV22
-                Operating account: LV71HABA0551038994679
-            </p>
-        </div>
-        <div class="contactForm title">
-            <div class="form-container ">
-                <h1>Leave a message!</h1>
-                <!-- form -->
-                <form method="post" action="https://forms.un-static.com/forms/d7916f3c5402462e2c6948a2fa51123405aed8bd"
-                    id="form">
-                    <!-- full name -->
-                    <div class="form-group">
-                        <label for="name">Full Name</label>
-                        <input type="text" id="name" placeholder="Full Name" name="name" required minlength="3"
-                            maxlength="100">
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" placeholder="+ Country code" name="phone" required
-                            pattern="(\+\d{1,15})">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email address</label>
-                        <input type="email" id="email" placeholder="email@address.com" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Your message here:</label>
-                        <textarea name="message" id="message" rows="5" cols="50" placeholder="Comment text."
-                            required></textarea>
-                    </div>
-                    <div class="wrapper">
-                        <button name="submit" type="submit">Send</button>
-                    </div>
-                </form>
-                <!-- error / success message -->
-                <div class="message-container">
-                    <h3 id="message-text">Please fill out required fields!</h3>
+    <div class="section FAQ" id="content-FAQ">
+        <div class="content-FAQ">
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">Question 1?</div>
+                    <div class="faq-answer">Answer to question 1.</div>
                 </div>
-                <div align="center">
-                    <p><small>(Powered by <a rel="nofollow" href="Un-static Forms">Un-static Forms</a>)</small></p>
+                <div class="faq-item">
+                    <div class="faq-question">Question 2?</div>
+                    <div class="faq-answer">Answer to question 2.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Question 3?</div>
+                    <div class="faq-answer">Answer to question 3.</div>
                 </div>
             </div>
         </div>
-        <!--Back to top button-->
-        <div id="backtotop" onclick="topFunction()" title="Go to top"><svg xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24" width="24" height="24">
-                <path
-                    d="M4.97 12.97a.75.75 0 101.06 1.06L11 9.06v12.19a.75.75 0 001.5 0V9.06l4.97 4.97a.75.75 0 101.06-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25zM4.75 3.5a.75.75 0 010-1.5h14.5a.75.75 0 010 1.5H4.75z">
-                </path>
-            </svg></div>
 
-        <!-- Script -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
-        <script>
-            VANTA.GLOBE({
-                el: "#globe",
-                mouseControls: true,
-                touchControls: true,
-                gyroControls: false,
-                minHeight: 200.00,
-                minWidth: 200.00,
-                scale: 1.00,
-                scaleMobile: 1.00,
-                color: 0x543fff
-            })
-        </script>
-        <script src="script.js"></script>
+    </div>
+    <div class="section contacts" id="contacts">
+        <div class="content-contacts">
+            <div class="map-details text"><iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2173.6028187097045!2d24.125755933074448!3d56.989862319818165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eecf0a33ab2059%3A0x2c66d58ba2548cd!2sSigntech%20Ltd.!5e0!3m2!1sen!2slv!4v1678964744758!5m2!1sen!2slv"
+                    style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <p>SIA “Signtech”
+                    Registration No.: 40103828379
+                    Legal address: Riga, 34 Duntes Street, LV-1005
+                    Bank details: JSC Swedbank HABALV22
+                    Operating account: LV71HABA0551038994679
+                </p>
+            </div>
+            <div class="contactForm title">
+                <div class="form-container ">
+                    <h1>Leave a message!</h1>
+                    <!-- form -->
+                    <form method="post"
+                        action="https://forms.un-static.com/forms/d7916f3c5402462e2c6948a2fa51123405aed8bd" id="form">
+                        <!-- full name -->
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" placeholder="Full Name" name="name" required minlength="3"
+                                maxlength="100">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" placeholder="+ Country code" name="phone" required
+                                pattern="(\+\d{1,15})">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="email" id="email" placeholder="email@address.com" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your message here:</label>
+                            <textarea name="message" id="message" rows="5" cols="50" placeholder="Comment text."
+                                required></textarea>
+                        </div>
+                        <div class="wrapper">
+                            <button name="submit" type="submit">Send</button>
+                        </div>
+                    </form>
+                    <!-- error / success message -->
+                    <div class="message-container">
+                        <h3 id="message-text">Please fill out required fields!</h3>
+                    </div>
+                    <div align="center">
+                        <p><small>(Powered by <a rel="nofollow" href="Un-static Forms">Un-static Forms</a>)</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Back to top button-->
+    <div id="backtotop" onclick="topFunction()" title="Go to top"><svg xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24" width="24" height="24">
+            <path
+                d="M4.97 12.97a.75.75 0 101.06 1.06L11 9.06v12.19a.75.75 0 001.5 0V9.06l4.97 4.97a.75.75 0 101.06-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25zM4.75 3.5a.75.75 0 010-1.5h14.5a.75.75 0 010 1.5H4.75z">
+            </path>
+        </svg></div>
+    <footer>&COPY; 2023 Signtech</footer>
+    <!-- Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
+    <script>
+        VANTA.GLOBE({
+            el: "#globe",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0x543fff
+        })
+    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
