@@ -428,6 +428,7 @@ p {
 
 .faq-answer {
   display: none;
+  margin: 15px;
 }
 
 .show {
