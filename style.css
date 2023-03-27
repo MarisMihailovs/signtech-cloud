@@ -428,7 +428,6 @@ p {
 
 .faq-answer {
   display: none;
-  margin: 15px;
 }
 
 .show {
@@ -462,7 +461,7 @@ p {
   color: #313131;
   font-size: 18px;
   line-height: 1.5;
-  margin-bottom: 20px;
+  margin: 15px;
   display: none;
 }
 
