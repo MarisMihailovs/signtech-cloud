@@ -80,7 +80,6 @@ footer {
   flex-direction: row;
   width: 75vw;
   justify-content: space-between;
-  align-items: flex-start;
 }
 
 
@@ -90,7 +89,6 @@ footer {
   flex-wrap: wrap;
   flex-direction: column;
   width: 90%;
-  justify-content: space-between;
   align-content: space-between;
   color: white;
 }
@@ -416,8 +414,16 @@ p {
   background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
 }
 
+.faq-item {
+  width: 80%;
+  background-color: white;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
 .faq-question {
   cursor: pointer;
+
 }
 
 .faq-answer {
@@ -434,7 +440,12 @@ p {
 }
 
 .faq-container {
-  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 70%;
 }
 
 .faq-question {
@@ -458,7 +469,7 @@ p {
   display: block;
 }
 
-.faq-item:last-child .faq-question {
+.faq-item .faq-question {
   margin-bottom: 0;
 }
 
@@ -770,7 +781,9 @@ td:nth-child(3) {
   }
 
   .section.contacts {
+    display: flex;
     flex-direction: column-reverse;
+    flex-wrap: wrap;
     min-width: 95vw;
     min-height: 95vh;
     justify-content: space-around;
@@ -837,7 +850,6 @@ td:nth-child(3) {
 
   .content-intro {
     width: 95vw;
-    justify-content: flex-end;
   }
 
   .nav-container {
