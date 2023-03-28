@@ -9,6 +9,7 @@ const menuBars = document.getElementById('menu-bars');
 const form = document.getElementById('form');
 const messageContainer = document.querySelector('.message-container');
 const message = document.getElementById('message-text');
+const expIcons = document.querySelectorAll('.circle');
 const faqItems = document.querySelectorAll('.faq-item');
 
 let isValid = false;
@@ -64,9 +65,22 @@ let callback = (entries, observer) => {
         if (entry.target.classList.contains('text') && entry.intersectionRatio > 0) {
             entry.target.classList.add('fly-in-bottom');
         };
+        if (entry.target.classList.contains('circle') && entry.intersectionRatio > 0 && expIcons[0].innerText !== 'installed screens 3500') {
 
-    })
+            let currentNumber = 0;
+            const interval = setInterval(() => {
+                currentNumber = currentNumber + 25;
+                expIcons[0].innerText = `installed screens ${currentNumber.toString()}`;
+                if (currentNumber === 3500) {
+                    clearInterval(interval);
+                }
+            }, 15);
+        }
+
+    });
+
 }
+
 
 const options = {
     // root: null,
@@ -77,7 +91,7 @@ const options = {
 let observer = new IntersectionObserver(callback, options);
 sectionHeadings.forEach(el => observer.observe(el));
 sectionTexts.forEach(el => observer.observe(el));
-
+expIcons.forEach(el => observer.observe(el));
 
 
 // document.scroll(function () {

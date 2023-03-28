@@ -31,6 +31,11 @@ body::-webkit-scrollbar-thumb {
   /* border: 2px solid color;  creates padding around scroll thumb */
 }
 
+ul {
+  margin: 10px;
+  padding: 10px;
+}
+
 footer {
   display: flex;
   align-items: center;
@@ -75,6 +80,14 @@ footer {
   min-height: 80vh;
 }
 
+.section.experience {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  min-width: 75vw;
+  min-height: 80vh;
+}
+
 .content-contacts {
   display: flex;
   flex-direction: row;
@@ -105,7 +118,7 @@ footer {
 .form-container {
   display: flex;
   color: white;
-  background-color: #68678c;
+  background-color: rgb(94, 121, 146);
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
@@ -198,13 +211,13 @@ textarea:invalid {
 
 .orderBtn {
   cursor: pointer;
+  background-color: rgb(94, 121, 146);
   text-transform: uppercase;
   color: #ffffff;
-  background: #2622ac;
-  border: none;
+  border: #ffffff solid 2px;
   border-radius: 5px;
-  height: 50px;
-  width: 70%;
+  height: 30px;
+  width: 150px;
   font-family: Cairo, sans-serif;
   font-size: 20px;
   margin-top: 15px;
@@ -213,9 +226,7 @@ textarea:invalid {
 
 .orderBtn:hover {
   background: white;
-  border-color: blue;
-  color: black;
-  border: black solid 2px;
+  color: rgb(94, 121, 146);
 }
 
 .wrapper {
@@ -338,7 +349,7 @@ p {
 
 .content-pricing {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
   width: 100vw;
@@ -351,53 +362,55 @@ p {
   color: white;
 }
 
-.content-pricing>div {
-  width: 45vw;
-}
-
-.cloud-package,
-.server-package {
+.productCard {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
-  background-color: whitesmoke;
-  border-radius: 10px;
-  box-shadow: 5px 5px 10px black;
-  margin: 15px;
-  min-height: 90%;
+  justify-content: space-around;
+  border: white solid 2px;
+  width: 250px;
+  height: 700px;
+  margin: 10px;
 }
 
+.productCard>img {
+  width: 250px;
+  height: 250px;
+}
 
-.liteCloud,
-.premiumCloud,
-.serverLite,
-.serverPremium {
+.content-experience {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 95vw;
+  min-height: 85vh;
+  height: auto;
+  margin-inline: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-style: solid;
+  border-image:
+    radial-gradient(rgb(255, 255, 255),
+      rgba(0, 0, 0, 0))3 0 3 0;
+  color: white;
+}
+
+.experience-icons {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: center;
 }
 
-.liteCloud>ul,
-.premiumCloud>ul,
-.serverLite>ul,
-.serverPremium>ul {
+.circle {
   display: flex;
-  flex-direction: column;
-  width: 50%;
-  margin: 15px;
-  text-align: left;
-  line-height: 180%;
-  color: black;
-}
-
-
-.content-pricing>div>.cloud-package>div>img,
-.content-pricing>div>.server-package>div>img {
-  display: inline;
-  width: 300px;
-  height: 300px;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 250px;
+  margin: 50px;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: whitesmoke;
 }
 
 .content-FAQ {
@@ -411,7 +424,11 @@ p {
   margin-top: 30px;
   margin-bottom: 30px;
   border-radius: 10px;
-  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+  background-image: linear-gradient(to top, rgb(94, 121, 146) 0%, #23153c 100%);
+}
+
+.content-FAQ>h1 {
+  color: whitesmoke;
 }
 
 .faq-item {
@@ -474,7 +491,7 @@ p {
 }
 
 .faq-question:hover {
-  color: #00b8e3;
+  color: #2622ac;
 }
 
 /* CSS */
@@ -747,6 +764,12 @@ td:nth-child(3) {
     justify-content: center;
   }
 
+  .experience-icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
   .content-pricing {
     display: flex;
     justify-content: space-around;
@@ -755,29 +778,6 @@ td:nth-child(3) {
     margin: 30px;
     width: 95vw;
     min-height: 75vh;
-  }
-
-  .content-pricing>div {
-    display: flex;
-    flex-direction: column;
-    width: 95vw;
-  }
-
-  .liteCloud,
-  .premiumCloud,
-  .serverLite,
-  .serverPremium {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-  }
-
-  .content-pricing>.cloud-package>div>img,
-  .content-pricing>.server-package>div>img {
-    display: inline;
-    width: 150px;
-    height: 150px;
   }
 
   .section.contacts {
