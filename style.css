@@ -389,9 +389,6 @@ p {
   margin-top: 30px;
   margin-bottom: 30px;
   border-style: solid;
-  border-image:
-    radial-gradient(rgb(255, 255, 255),
-      rgba(0, 0, 0, 0))3 0 3 0;
   color: white;
   background-image: url(/img/background_exp.svg);
   background-size: cover;
