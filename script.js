@@ -10,6 +10,7 @@ const form = document.getElementById('form');
 const messageContainer = document.querySelector('.message-container');
 const message = document.getElementById('message-text');
 const expIcons = document.querySelectorAll('.circle');
+const iconText = document.querySelectorAll('.circleText');
 const faqItems = document.querySelectorAll('.faq-item');
 
 let isValid = false;
@@ -65,17 +66,50 @@ let callback = (entries, observer) => {
         if (entry.target.classList.contains('text') && entry.intersectionRatio > 0) {
             entry.target.classList.add('fly-in-bottom');
         };
-        if (entry.target.classList.contains('circle') && entry.intersectionRatio > 0 && expIcons[0].innerText !== 'installed screens 3500') {
+        if (entry.target.classList.contains('circle') && entry.intersectionRatio > 0 && expIcons[0].innerText !== 'installed screens >5500') {
 
             let currentNumber = 0;
             const interval = setInterval(() => {
                 currentNumber = currentNumber + 25;
-                expIcons[0].innerText = `installed screens ${currentNumber.toString()}`;
-                if (currentNumber === 3500) {
+                iconText[0].innerText = `installed screens >${currentNumber.toString()}`;
+                if (currentNumber === 5500) {
                     clearInterval(interval);
                 }
             }, 15);
-        }
+        };
+        if (entry.target.classList.contains('circle') && entry.intersectionRatio > 0 && expIcons[1].innerText !== 'Operation in 27 countries') {
+
+            let currentNumber = 0;
+            const interval = setInterval(() => {
+                currentNumber = currentNumber + 3;
+                iconText[1].innerText = `Operation in ${currentNumber.toString()} countries`;
+                if (currentNumber === 27) {
+                    clearInterval(interval);
+                }
+            }, 200);
+        };
+        if (entry.target.classList.contains('circle') && entry.intersectionRatio > 0 && expIcons[2].innerText !== 'Satisfied customers >800') {
+
+            let currentNumber = 0;
+            const interval = setInterval(() => {
+                currentNumber = currentNumber + 8;
+                iconText[2].innerText = `Satisfied customers >${currentNumber.toString()}`;
+                if (currentNumber === 800) {
+                    clearInterval(interval);
+                }
+            }, 20);
+        };
+        if (entry.target.classList.contains('circle') && entry.intersectionRatio > 0 && expIcons[3].innerText !== 'Established in 2014') {
+
+            let currentNumber = 0;
+            const interval = setInterval(() => {
+                currentNumber = currentNumber + 19;
+                iconText[3].innerText = `Established in ${currentNumber.toString()}`;
+                if (currentNumber === 2014) {
+                    clearInterval(interval);
+                }
+            }, 5);
+        };
 
     });
 
